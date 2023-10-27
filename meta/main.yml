@@ -1,0 +1,22 @@
+galaxy_info:
+  role_name: 'opensuse_configure_transactional_update_service'
+  namespace: 'johanneskastl'
+  author: 'Johannes Kastl'
+  description: 'Configure the transactional-update.service on openSUSE'
+  company: 'B1 Systems GmbH'
+
+  license: 'BSD-3-Clause'
+
+  min_ansible_version: '2.12'
+
+  platforms:
+    - name: opensuse
+      versions:
+        - all
+    - name: SLES
+      versions:
+        - all
+
+  galaxy_tags: []
+
+dependencies: []
