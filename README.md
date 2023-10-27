@@ -13,7 +13,11 @@ None.
 Role Variables
 --------------
 
-None.
+- `transactional_updates_reboot_method` (String): reboot method that is to be
+  used with the transactional-update.service
+
+Check the
+[manpage](https://manpages.opensuse.org/Tumbleweed/transactional-update/transactional-update.conf.5.en.html) for details.
 
 Dependencies
 ------------
@@ -23,9 +27,12 @@ None
 Example Playbook
 ----------------
 
-    - hosts: servers
-      roles:
-        - role: 'johanneskastl.opensuse_configure_transactional_update_service'
+```yaml
+- hosts: servers
+  roles:
+    - role: 'johanneskastl.opensuse_configure_transactional_update_service'
+      transactional_updates_reboot_method: kured
+```
 
 License
 -------
