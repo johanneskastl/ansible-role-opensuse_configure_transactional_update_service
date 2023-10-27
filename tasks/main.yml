@@ -1,0 +1,12 @@
+---
+# opensuse_configure_transactional_update_service/tasks/main.yml
+
+- name: 'Create /etc/transactional-update.conf'
+  ansible.builtin.template:
+    src: 'transactional-updates.conf.j2'
+    dest: '/etc/transactional-update.conf'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+  when:
+    - transactional_updates_reboot_method is defined
